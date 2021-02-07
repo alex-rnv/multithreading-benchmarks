@@ -20,7 +20,7 @@ public class AtomicBitsetSieve implements Sieve {
 
     @Override
     public void mark(int prime) {
-        for (int j = 2 * prime; j < size; j += prime) {
+        for (long j = 2L * prime; j < size; j += prime) {
             sieve.set(j);
         }
     }

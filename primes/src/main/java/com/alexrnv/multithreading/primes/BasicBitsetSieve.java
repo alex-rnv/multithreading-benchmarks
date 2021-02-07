@@ -20,8 +20,8 @@ public class BasicBitsetSieve implements Sieve {
 
     @Override
     public void mark(int prime) {
-        for (int j = 2 * prime; j < size; j += prime) {
-            sieve.set(j);
+        for (long j = 2L * prime; j < size; j += prime) {
+            sieve.set((int)j);
         }
     }
 
