@@ -29,7 +29,7 @@ public class SkipEvenByteArraySieve implements Sieve {
 
     @Override
     public void mark(int prime) {
-        int start = prime;
+        long start = prime;
         switch (this.startFrom) {
             case TRIPLE_PRIME:
                 start *= 3;
@@ -52,6 +52,6 @@ public class SkipEvenByteArraySieve implements Sieve {
     }
 
     private int bitIndex(long i) {
-        return (int)(i >> 1) - 1;
+        return (int)((i >> 1) - 1);
     }
 }

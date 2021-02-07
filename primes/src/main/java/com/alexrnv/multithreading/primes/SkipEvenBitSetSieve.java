@@ -21,7 +21,7 @@ public class SkipEvenBitSetSieve implements Sieve {
 
     @Override
     public void mark(int prime) {
-        for (long j = prime * prime; j < size; j += 2 * prime) {
+        for (long j = prime * (long)prime; j < size; j += 2L * prime) {
             sieve.set(bitIndex(j));
         }
     }
@@ -37,6 +37,6 @@ public class SkipEvenBitSetSieve implements Sieve {
     }
 
     private int bitIndex(long i) {
-        return (int)(i >> 1) - 1;
+        return (int)((i >> 1) - 1);
     }
 }
